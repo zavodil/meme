@@ -27,6 +27,10 @@ MEME = {
   }
 };
 
+$('#meme-save').bind('click', function(e) {
+  saveMeme($(e.currentTarget).attr("data"));
+});
+
 MEME.$(function() {
   MEME.init();
 });

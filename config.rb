@@ -32,6 +32,6 @@ configure :build do
   set :url_prefix, ""
   set :absolute_prefix, ""
   activate :asset_hash
-  activate :minify_javascript
-  activate :minify_css
+  #activate :minify_javascript
+  #activate :minify_css
 end

@@ -103,7 +103,7 @@ MEME.MemeCanvasView = Backbone.View.extend({
       if (d.textAlign == 'center') {
         ctx.textAlign = 'center';
         x = d.width / 2;
-        y = d.height - d.height / 1.5;
+        //y = d.height - d.height / 1.5;
         maxWidth = d.width - d.width / 3;
 
       } else if (d.textAlign == 'right' ) {
@@ -175,7 +175,11 @@ MEME.MemeCanvasView = Backbone.View.extend({
     var data = this.canvas.toDataURL(); //.replace('image/png', 'image/octet-stream');
     this.$('#meme-download').attr({
       'href': data,
-      'download': (d.downloadName || 'share') + '.png'
+      'save': (d.downloadName || 'share') + '.png'
+    });
+
+    this.$('#meme-save').attr({
+      'data': data
     });
 
     // Enable drag cursor while canvas has artwork:

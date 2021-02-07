@@ -4,12 +4,32 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif !important;
+  font-weight: bold !important;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./media/fonts/0_0.woff2') format('woff2'), url('./media/fonts/0_0.woff2') format('woff');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./media/fonts/1_0.woff2') format('woff2'), url('./media/fonts/1_0.woff2') format('woff');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./media/fonts/2_0.woff2') format('woff2'), url('./media/fonts/2_0.woff2') format('woff');
+  font-weight: bold;
+}
 
 body {
   background-color: #fff;
   color: $default-text-color;
   display: table;
-  font-family: 'Helvetica';
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
   font-size: percentage($default-font-size/16px);
   height: 100%;
   line-height: $default-line-height;
@@ -65,4 +85,12 @@ body.noselect {
 }
 .cf {
     *zoom: 1;
+}
+
+#select-background div{
+  width: 80px;
+  height: 40px;
+  display: inline-block;
+  background-size: 80px;
+  cursor: pointer;
 }

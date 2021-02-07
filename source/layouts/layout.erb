@@ -1,15 +1,27 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <%= partial "partials/head" %>
-  </head>
-  <body class="<%= page_classes %>">
-    <div class="m-meme">
-      <h1>Meme Generator</h1>
-      <%= partial "partials/editor" %>
-      <%= partial "partials/canvas" %>
+</head>
+<body class="<%= page_classes %>">
+<div class="m-meme">
+    <h1>Akash Meme Generator</h1>
+    <%= partial "partials/editor" %>
+    <%= partial "partials/canvas" %>
+</div>
+<%= javascript_include_tag 'application' %>
+<%= javascript_include_tag 'settings' %>
+
+<div id="modalbox" class="modalbox success col-sm-8 col-md-6 col-lg-5 center animate" style="display: none">
+    <div class="icon">
+        <span class="glyphicon glyphicon-ok"></span>
     </div>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag 'settings' %>
-  </body>
+    <!--/.icon-->
+    <h1>Success!</h1>
+    <p>Image was successfully created and saved on server.</p>
+    <label for="saved-file-url">Your image url is:</label>
+    <input id="saved-file-url" type="text" disabled onfocus="this.select();" onmouseup="return false;">
+    <button onClick="CloseModalBox();" type="button" class="redo btn">Copy url & Close</button>
+</div>
+</body>
 </html>
