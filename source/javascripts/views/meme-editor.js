@@ -256,12 +256,13 @@ MEME.MemeEditorView = Backbone.View.extend({
 });
 
 async function createFile(file) {
-    let response = await fetch('/media/' + file);
-    let data = await response.blob();
-    let metadata = {
-        type: 'image/jpeg'
+    const response = await fetch(file);
+    const data = await response.blob();
+    const extension = file.split('.').pop();
+    const metadata = {
+        type: 'image/' + (extension === "png" ? "png" : "jpeg")
     };
-    return new File([data], "background.jpg", metadata);
+    return new File([data], `background.${extension}`, metadata);
 }
 
 function saveMeme(data) {

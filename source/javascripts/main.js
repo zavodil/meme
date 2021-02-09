@@ -38,7 +38,7 @@ MEME.$(function() {
 $(document).ready(function() {
   $.getJSON( "/media/media.json", function( data ) {
     $.each( data, function( key, val ) {
-      $(`<div data-url="${val}" style="background-image: url('/media/${val}')"></div>`).appendTo( "#select-background" );
+      $(`<div data-url="${val}" style="background-image: url('${val}')"></div>`).appendTo( "#select-background" );
     });
   });
 });
