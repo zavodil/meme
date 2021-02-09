@@ -34,3 +34,11 @@ $('#meme-save').bind('click', function(e) {
 MEME.$(function() {
   MEME.init();
 });
+
+$(document).ready(function() {
+  $.getJSON( "/media/media.json", function( data ) {
+    $.each( data, function( key, val ) {
+      $(`<div data-url="${val}" style="background-image: url('/media/${val}')"></div>`).appendTo( "#select-background" );
+    });
+  });
+});
