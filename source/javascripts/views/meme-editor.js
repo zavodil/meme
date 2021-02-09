@@ -147,6 +147,9 @@ MEME.MemeEditorView = Backbone.View.extend({
         "dragover #dropzone": "onZoneOver",
         "dragleave #dropzone": "onZoneOut",
         "drop #dropzone": "onZoneDrop",
+        "click #dropzone": "onZoneClick",
+        "change #file-input": "onFileSelect",
+        "change #aspect-ratio": "onAspectRatio",
         "click #select-background div": "onSelectBackground"
     },
 
@@ -228,6 +231,21 @@ MEME.MemeEditorView = Backbone.View.extend({
             console.log(dataTransfer.files[0]);
             this.$('#dropzone').removeClass('pulse');
         }
+    },
+
+    onZoneClick: function () {
+        $("#file-input").click()
+    },
+
+    onFileSelect: function (t) {
+        const e = t.target, n = this.model;
+        e && (n.loadBackground(e.files[0]), n.background.onload = function () {
+            n.set("imageSrc", n.background.src)
+        })
+    },
+
+    onAspectRatio: function () {
+        this.model.set("aspectRatio", this.$("#aspect-ratio").val())
     },
 
     onSelectBackground: async function (evt) {

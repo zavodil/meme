@@ -29,11 +29,23 @@
   </div>
 
   <div class="design-pane drawer">
-    <div class="dropzone" id="dropzone">Drop Image Here</div>
+    <h4>Aspect Ratio</h4>
+    <select class="aspect-ratio" id="aspect-ratio">
+      <option value="" disabled="">Select aspect ratio</option>
+      <option value="twitter">2:1 (Twitter)</option> <!-- [W:1024px | H:512px] -->
+      <option value="instagram">1:1 (Twitter or Instagram)</option> <!-- [W:1080px | H:1080px] -->
+      <option value="facebook">Facebook</option> <!-- [W:1200px | H:630px] -->
+      <option value="pinterest">Pinterest </option> <!-- [W:736px | H:1128px] -->
+    </select>
+
+    <div class="dropzone" id="dropzone">Click or Drop Background Image</div>
+    <input type="file" id="file-input" name="file-input">
 
     <div id="select-background">
-      <div data-url="clouds.jpg" style="background-image: url('/media/clouds.jpg')"></div>
+      <div data-url="akash-bg.jpg" style="background-image: url('/media/akash-bg.jpg')"></div>
+      <div data-url="akash-waves.jpg" style="background-image: url('/media/akash-waves.jpg')"></div>
       <div data-url="unstoppable-cloud.jpg" style="background-image: url('/media/unstoppable-cloud.jpg')"></div>
+      <div data-url="clouds.jpg" style="background-image: url('/media/clouds.jpg')"></div>
     </div>
 
     <h2><label for="image-scale">Resize image</label></h2>
