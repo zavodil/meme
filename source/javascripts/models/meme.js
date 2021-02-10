@@ -6,8 +6,8 @@ MEME.MemeModel = Backbone.Model.extend({
     defaults: {
         aspectRatio: "twitter",
         backgroundPosition: {x: null, y: null},
-        creditText: '',
-        creditSize: 12,
+        footerText: '',
+        footerFontSize: 16,
         downloadName: 'share',
         fontColor: 'white',
         fontColorOpts: ['#FFF', '#000', '#777', '#2980b9', '#e41e13'],
@@ -23,6 +23,7 @@ MEME.MemeModel = Backbone.Model.extend({
         overlayColorOpts: ['#000', '#777', '#2980b9', '#e41e13'],
         paddingRatio: 0.05,
         textAlign: 'center',
+        footerAlign: 'left',
         textAlignOpts: ['left', 'center', 'right'],
         textShadow: true,
         textShadowEdit: true,

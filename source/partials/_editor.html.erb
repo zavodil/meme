@@ -9,14 +9,14 @@
     <textarea id="headline" name="headline" type="text" value=""></textarea>
 
     <select class="text-align" id="text-align">
-      <option value="" disabled>Select alignment</option>
+      <option value="" disabled>Select header alignment</option>
     </select>
 
     <select class="font-family" id="font-family">
       <option value="" disabled>Select a font</option>
     </select>
 
-    <h2><label for="font-size">Font Size</label></h2>
+    <h2><label for="font-size">Header Font Size</label></h2>
     <input id="font-size" type="range" max="64" min="18" step=".1" value="24">
 
     <div class="checkbox-group text-shadow">
@@ -24,8 +24,14 @@
       <label for="text-shadow">Text Shadow</label>
     </div>
 
-    <h4><label for="credit">Footer</label></h4>
-    <input id="credit" name="credit" type="text" value="">
+    <h4><label for="footer">Footer</label></h4>
+    <input id="footer" name="footer" type="text" value="">
+    <select class="text-align" id="footer-align">
+      <option value="" disabled>Select footer alignment</option>
+    </select>
+    <h2><label for="footer-font-size">Footer Font Size</label></h2>
+    <input id="footer-font-size" type="range" max="64" min="18" step=".1" value="24">
+
   </div>
 
   <div class="design-pane drawer">
@@ -35,7 +41,8 @@
       <option value="twitter">2:1 (Twitter)</option>
       <option value="instagram">1:1 (Twitter or Instagram)</option>
       <option value="facebook">Facebook</option>
-      <option value="pinterest">Pinterest </option>
+      <option value="pinterest">Pinterest</option>
+      <option value="other">4:3 Other</option>
     </select>
 
     <div class="dropzone" id="dropzone">Click or Drop Background Image</div>
