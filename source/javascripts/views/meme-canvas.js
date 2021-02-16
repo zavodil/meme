@@ -166,6 +166,14 @@ MEME.MemeCanvasView = Backbone.View.extend({
             ctx.fillStyle = d.fontColor;
             ctx.font = 'normal ' + d.footerFontSize + 'pt ' + d.fontFamily;
 
+            // Text shadow:
+            if (d.textShadow) {
+                ctx.shadowColor = "#666";
+                ctx.shadowOffsetX = -2;
+                ctx.shadowOffsetY = 1;
+                ctx.shadowBlur = 10;
+            }
+
             // Text alignment:
             if (d.footerAlign === 'center') {
                 ctx.textAlign = 'center';
